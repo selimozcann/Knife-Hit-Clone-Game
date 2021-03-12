@@ -10,6 +10,7 @@ namespace KnifeControllerSystem
         [SerializeField] private SpeedScriptable _speedScriptable;
         [SerializeField] private Transform _knifePrefab;
         [SerializeField] private SpriteRenderer _knifeSpriteRenderer;
+        [SerializeField] private Transform _board;
         private GameObject _knifeSprite;
         private Rigidbody2D _rb;
         private void Start()
@@ -30,9 +31,12 @@ namespace KnifeControllerSystem
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Target") && collision.gameObject.transform.childCount < 6)
+            if (collision.gameObject.CompareTag("Target"))
             {
-                Instantiate(_knifePrefab, new Vector2(0, -3.7f), Quaternion.identity);
+                if (_board.childCount < 5)
+                {
+                    Instantiate(_knifePrefab, new Vector2(0, -3.7f), Quaternion.identity);
+                }
                 transform.SetParent(collision.transform);
                 _rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 gameObject.GetComponent<PolygonCollider2D>().enabled = false;
