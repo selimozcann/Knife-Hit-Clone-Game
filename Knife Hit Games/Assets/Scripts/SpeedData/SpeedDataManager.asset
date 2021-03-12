@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SpeedDataManager
   m_EditorClassIdentifier: 
   _boardRotateSpeed: 125
-  _knifeControllerSpeed: 0
+  _knifeControllerSpeed: 12.5

@@ -12,13 +12,6 @@ namespace BoardControllerSystem
         {
             transform.Rotate(Vector3.back * _speedScriptable.BoardRotateSpeedProperty * Time.deltaTime );
         }
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (collision.gameObject.CompareTag("Knife"))
-            {
-                collision.transform.SetParent(transform);
-            }
-        }
     }
 }
 
