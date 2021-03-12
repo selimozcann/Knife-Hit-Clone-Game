@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f662f3afc7d7f3f4397f9a65bbb27e96, type: 3}
   m_Name: SpeedDataManager
   m_EditorClassIdentifier: 
-  _boardRotateSpeed: 90
+  _boardRotateSpeed: 125
   _knifeControllerSpeed: 0
