@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    GameState _gameState;
+    private void Start()
     {
-        
+        _gameState = GameState.Intro;
     }
-
-    // Update is called once per frame
-    void Update()
+    public enum GameState
     {
-        
+        Intro,
+        Playing,
+        Fail,
+        Finish
+    }
+    public bool GamePlay()
+    {
+        return Input.GetMouseButton(0);
     }
 }
