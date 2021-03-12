@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1588636065595619378}
   - component: {fileID: 1588636065595619379}
   - component: {fileID: 1588636065595619376}
-  - component: {fileID: 1588636065595619377}
   - component: {fileID: 1588636065595619383}
+  - component: {fileID: 719052425}
+  - component: {fileID: 719052424}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Knife
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588636065595619372}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.7, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
@@ -105,7 +106,44 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &1588636065595619377
+--- !u!114 &1588636065595619383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588636065595619372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3895179cba5f9984eb23062cfe627992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedScriptable: {fileID: 11400000, guid: ce1c9154594d9c940823f84b485395f3, type: 2}
+  _knifePrefab: {fileID: 1588636065595619378}
+--- !u!68 &719052425
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588636065595619372}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.5059769, y: -4.9282217}
+  - {x: 0.5344491, y: -4.958295}
+  - {x: 0.5579541, y: -4.9378767}
+  - {x: 0.9824579, y: -1.039773}
+  - {x: -0.9602547, y: -1.05474}
+  - {x: -0.97285986, y: -1.1947203}
+  - {x: -0.58739674, y: -4.872222}
+--- !u!60 &719052424
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,17 +247,3 @@ PolygonCollider2D:
       - {x: 0.57, y: -4.91}
       - {x: 0.59999996, y: -4.7799997}
       - {x: 0.58, y: -4.72}
---- !u!114 &1588636065595619383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588636065595619372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3895179cba5f9984eb23062cfe627992, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speedScriptable: {fileID: 11400000, guid: ce1c9154594d9c940823f84b485395f3, type: 2}
-  _knifePrefab: {fileID: 1588636065595619378}

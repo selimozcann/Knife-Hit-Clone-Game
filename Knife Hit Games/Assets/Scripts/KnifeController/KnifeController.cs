@@ -33,6 +33,7 @@ namespace KnifeControllerSystem
                 Instantiate(_knifePrefab, new Vector2(0, -3.7f), Quaternion.identity);
                 transform.SetParent(collision.transform);
                 _rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                gameObject.GetComponent<PolygonCollider2D>().enabled = false;
             }
             else if (collision.gameObject.CompareTag("Knife"))
             {
